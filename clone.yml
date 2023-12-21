@@ -9,7 +9,7 @@
 
     - name: Clone the repository
       git:
-        repo: "git@github.com:RajeevKL-DreamLane/easy-deploy.git"
+        repo: ""
         dest: "/home/ec2-user/"  
         version: main 
         update: yes  

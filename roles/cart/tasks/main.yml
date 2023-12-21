@@ -1,0 +1,7 @@
+---
+- name: printing message from vars
+  hosts: all
+  tasks: 
+    - name: printing message
+      debug:
+        msg: value is {{prem}}
