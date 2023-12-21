@@ -4,4 +4,4 @@
   tasks: 
      - name: printing message
        debug:
-         msg: value is {{ prem }}
+         msg: value is {{prem}}
