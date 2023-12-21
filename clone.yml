@@ -9,7 +9,7 @@
 
     - name: Clone the repository
       git:
-        repo: "git@github.com:premsarja/ans-1.git"
+        repo: "git@github.com:RajeevKL-DreamLane/easy-deploy.git"
         dest: "/home/ec2-user/"  
         version: main 
         update: yes  
