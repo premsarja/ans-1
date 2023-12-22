@@ -1,4 +1,4 @@
-- name: cloning repo
+- name: git
   become: yes
   hosts: all
   tasks:
