@@ -1,4 +1,5 @@
 - name: clonning repo url
+  become: yes
   tasks:
     - name: install git 
       ansible.builtin.package:
