@@ -1,6 +1,4 @@
 - name: roles
   become: yes
-  hosts: all
-
   roles:
     - cart
