@@ -1,4 +1,7 @@
-- name: do something
-  include_role:
-    name: roles
-    tasks_from: cart
+---
+- name: Playbook using the role
+  hosts: all
+  become: yes
+
+  roles:
+    - cart
