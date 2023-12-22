@@ -1,4 +1,4 @@
-- name: roles
-  become: yes
-  tasks: 
-  - include: roles/cart/main.yml
+- name: do something
+  include_role:
+    name: roles
+    tasks_from: cart
