@@ -1,6 +1,8 @@
-- name: installing package git
+- name: clonning repo url
+  hosts: all
+  become: yes
   tasks:
-   - name: install git 
-     package:
-         name: git
-         state: present
+    - name: install git 
+      ansible.builtin.package:
+        name: git
+        state: present
