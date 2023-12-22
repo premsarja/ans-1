@@ -1,5 +1,5 @@
 ---
-- name: clonning repo url
+- name: cloning repo
   hosts: all
   become: yes
   tasks:
