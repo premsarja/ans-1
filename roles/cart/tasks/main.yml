@@ -1,7 +1,9 @@
 ---
-- name: printing message from vars
+- name: clonning repo url
   hosts: all
-  tasks: 
-     - name: printing message
-       debug:
-         msg: value is {{prem}}
+  become: yes
+  tasks:
+    - name: install git 
+      ansible.builtin.package:
+        name: git
+        state: present
