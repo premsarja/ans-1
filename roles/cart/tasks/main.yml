@@ -1,6 +1,7 @@
 - name: git
   become: yes
   hosts: all
+  
   tasks:
     - name: install git 
       package:
