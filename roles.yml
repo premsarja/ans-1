@@ -1,5 +1,4 @@
 - name: roles
   become: yes
-  hosts: all
-  roles:
-    - cart
+  tasks: 
+  - include: roles/cart/main.yml
