@@ -1,5 +1,5 @@
 - name: playbbook to call roles
   become: yes
-  hosts: all
+  hosts: cart
   roles:
     - cart
