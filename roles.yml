@@ -1,3 +1,3 @@
-    - name: Include the 'cart' role
-      roles:
-        - cart  # This line includes the 'cart' role
+ - name: Include the 'cart' role
+   roles:
+      - cart  # This line includes the 'cart' role
