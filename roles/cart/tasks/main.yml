@@ -1,9 +1,9 @@
-- name: git
+- name: installing package git
   become: yes
   hosts: all
-  
+
   tasks:
-    - name: install git 
-      package:
+   - name: install git 
+     package:
          name: git
          state: present
