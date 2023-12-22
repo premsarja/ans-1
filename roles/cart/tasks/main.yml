@@ -1,4 +1,3 @@
----
 - name: cloning repo
   hosts: all
   become: yes
