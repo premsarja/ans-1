@@ -1,6 +1,6 @@
 - name: git
   become: yes
-  hosts: cart
+  hosts: all
   tasks:
     - name: install git 
       package:
