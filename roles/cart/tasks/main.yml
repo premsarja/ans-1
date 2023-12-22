@@ -3,6 +3,6 @@
   hosts: all
   tasks:
     - name: install git 
-      ansible.builtin.package:
-        name: git
-        state: present
+      package:
+         name: git
+         state: present
