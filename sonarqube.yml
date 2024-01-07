@@ -8,6 +8,7 @@
         state: present
         
     - name: Download SonarQube zip file
-      ansible.builtin.get_url:
+      unarchieve:
         url: "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip"
         dest: "/opt/sonarqube-9.6.1.59531.zip"
+        remote: no
