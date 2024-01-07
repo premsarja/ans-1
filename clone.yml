@@ -3,13 +3,5 @@
   become: yes
   tasks:
     - name: install git 
-      ansible.builtin.package:
-        name: git
-        state: present
+      ansible.builtin.shell:yum install git && cd /home/ec2-user/
 
-    - name: Clone the repository
-      git:
-        repo: ""
-        dest: "/home/ec2-user/"  
-        version: main 
-        update: yes  
