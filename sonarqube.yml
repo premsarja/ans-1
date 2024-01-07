@@ -7,7 +7,7 @@
         name: java  # Package name for OpenJDK 11, adjust based on your OS and Java version
         state: present
         
-- name: Unarchive a file that needs to be downloaded (added in 2.0)
+- name: SonarQube
   ansible.builtin.unarchive:
     src: wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip
     dest: /opt/
