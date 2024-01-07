@@ -24,3 +24,15 @@
         src: "/opt/sonarqube-9.6.1.59531.zip"
         dest: "/opt/"
         remote_src: yes
+
+    - name: Creating user
+      ansible.builtin.user:
+        name: sonar
+        comment: sonar user
+      register: USERINFO 
+    
+    - name: Printing the variable 
+      ansible.builtin.debug:
+        msg: Value of the OUT is {{USERINFO}}            
+    
+    
