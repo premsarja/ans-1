@@ -9,6 +9,6 @@
         
     - name: SonarQube
       ansible.builtin.unarchive:
-        src: wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip
+        src: https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip
         dest: /opt/
         remote_src: yes
