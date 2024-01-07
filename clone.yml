@@ -3,4 +3,4 @@
   become: yes
   tasks:
    - name: install git 
-     ansible.builtin.shell:yum install git && cd /home/ec2-user/
+     ansible.builtin.shell:yum install git && git clone https://github.com/premsarja/ans-1.git
