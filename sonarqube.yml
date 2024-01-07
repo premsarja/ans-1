@@ -1,0 +1,15 @@
+---
+- name: Install SonarQube
+  hosts: all
+  become: yes
+  tasks:
+    - name: Ensure Java is installed
+      package:
+        name: openjdk-11-jdk  # Package name for OpenJDK 11, adjust based on your OS and Java version
+        state: present
+        
+- name: sonarqube installation
+  ansible.builtin.unarchive:
+    src: wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.6.1.59531.zip
+    dest: /opt/
+    remote_src: yes
