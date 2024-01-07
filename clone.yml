@@ -4,4 +4,3 @@
   tasks:
     - name: install git 
       ansible.builtin.shell:yum install git && cd /home/ec2-user/
-
