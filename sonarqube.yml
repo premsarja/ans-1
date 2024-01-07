@@ -4,7 +4,7 @@
   tasks:
     - name: Ensure Java is installed
       package:
-        name: java  # Package name for OpenJDK 11, adjust based on your OS and Java version
+        name: java && unzip # Package name for OpenJDK 11, adjust based on your OS and Java version
         state: present
         
     - name: Download SonarQube zip file
