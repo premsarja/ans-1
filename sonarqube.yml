@@ -5,7 +5,7 @@
   tasks:
     - name: Ensure Java is installed
       package:
-        name: openjdk-11-jdk
+        name: java
         state: present
         
     - name: Create /opt directory
