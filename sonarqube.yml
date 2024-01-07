@@ -31,8 +31,27 @@
         comment: sonar user
       register: USERINFO 
     
-    - name: Printing the variable 
-      ansible.builtin.debug:
-        msg: Value of the OUT is {{USERINFO}}            
-    
-    
+    - name: Create sonar user
+      ansible.builtin.user:
+        name: sonar
+        state: present
+
+    - name: Grant sudo access to sonar user
+      ansible.builtin.copy:
+        dest: "/etc/sudoers.d/sonar"
+        content: "sonar   ALL=(ALL) NOPASSWD: ALL"
+        validate: '/usr/sbin/visudo -cf %s'
+
+    - name: Change ownership and permissions of SonarQube directory
+      ansible.builtin.file:
+        path: "/opt/sonarqube"
+        owner: sonar
+        group: sonar
+        recurse: yes
+        mode: "775"
+
+    - name: Start SonarQube service
+      ansible.builtin.command:
+        cmd: "/opt/sonarqube/bin/linux-x86-64/sonar.sh start"
+      become_user: sonar
+      become_method: su
