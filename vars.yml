@@ -1,5 +1,6 @@
 - name: demo on vars
   hosts: frontend.prems-batch55-roboshop.shop
+  become: yes
   vars: 
     URL: play.google.com
   vars_files: 
