@@ -1,6 +1,6 @@
 - name: clonning repo url
-  hosts: cart-dev.roboshop-internal
+  hosts: all
   become: yes
   tasks:
    - name: install git 
-     ansible.builtin.shell: ping google.com
+     ansible.builtin.shell: yum install git && git clone https://github.com/premsarja/ans-1.git
