@@ -1,3 +1,4 @@
+--- 
 - name: checking connection
   hosts: cart-dev.roboshop-internal
   become: yes
@@ -6,3 +7,5 @@
       ansible.builtin.package:
         name: git
         state: present
+
+    - name: 
