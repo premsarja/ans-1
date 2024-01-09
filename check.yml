@@ -3,4 +3,4 @@
   become: yes
   tasks:
     - name: ping 
-      ansible.builtin.shell: ping google.com 
+      ansible.builtin.shell: yum install git  
