@@ -2,5 +2,7 @@
   hosts: cart-dev.roboshop-internal
   become: yes
   tasks:
-    - name: ping 
-      ansible.builtin.shell: yum install git  
+    - name: installing git
+      ansible.builtin.package:
+        name: git
+        state: present
