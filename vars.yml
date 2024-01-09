@@ -1,0 +1,10 @@
+- name: demo on vars
+  hosts: frontend.prems-batch55-roboshop.shop
+  vars: 
+    URL: play.google.com
+  vars_files: 
+    - "{{ENV}}.yml"
+  tasks:
+    - name: printing HAI from task1 of play1
+      ansible.builtin.debug:
+        msg: value of {{URL}}
