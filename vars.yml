@@ -4,8 +4,6 @@
   become: yes
   vars: 
     URL: play.google.com
-  vars_files: 
-    - "{{ENV}}.yml"
   tasks:
     - name: printing HAI from task1 of play1
       ansible.builtin.debug:
