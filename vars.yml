@@ -1,5 +1,6 @@
+---
 - name: demo on vars
-  hosts: redis-dev.roboshop-internal
+  hosts: cart-dev.roboshop-internal
   become: yes
   vars: 
     URL: play.google.com
