@@ -2,6 +2,5 @@
   hosts: cart-dev.roboshop-internal
   become: yes
   tasks:
-    name: install git 
-    ansible.builtin.shell: ping google.com
-
+    - name: install git 
+      ansible.builtin.shell: ping google.com 
