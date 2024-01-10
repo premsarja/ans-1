@@ -5,7 +5,7 @@
   vars:
     action: true
   tasks:
-    - name: run if flavour is centos
+    - name: run if flavour is CentOS
       ansible.buitin.debug:
-        msg: welcome to centos
-      when: ansible_distribution == "centOS"     
+        msg: welcome to CentOS
+      when: ansible_distribution == "CentOS"     
