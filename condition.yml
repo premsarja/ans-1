@@ -1,5 +1,4 @@
 ---
-
 - name: condition
   hosts: mongodb-dev.roboshop-internal
   vars:
@@ -9,3 +8,8 @@
       ansible.builtin.debug:
         msg: welcome to CentOS
       when: ansible_distribution == "CentOS"     
+
+    - name: run if flavour is redhat
+      ansible.builtin.debug:
+        msg: welcome to redhat
+      when: ansible_distribution == "redhat"       
