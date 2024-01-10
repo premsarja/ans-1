@@ -6,6 +6,6 @@
     action: true
   tasks:
     - name: run if flavour is CentOS
-      ansible.buitin.debug:
+      ansible.builtin.debug:
         msg: welcome to CentOS
       when: ansible_distribution == "CentOS"     
