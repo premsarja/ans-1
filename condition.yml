@@ -1,15 +1,17 @@
 ---
 - name: condition
-  hosts: mongodb-dev.roboshop-internal
+  hosts: mongodb-dev.roboshop-internal  # Targets specific hosts
+  
   vars:
-    action: true
+    action: true  # Defines the variable 'action'
+
   tasks:
     - name: run if flavor is CentOS
       ansible.builtin.debug:
         msg: "Welcome to CentOS {{ ansible_distribution }}"
-      when: ansible_distribution == "CentOS"
+      when: ansible_distribution == "CentOS"  # Executes only if distribution is CentOS
 
     - name: run if flavor is redhat
       ansible.builtin.debug:
         msg: "Welcome to redhat {{ ansible_distribution }}"
-      when: ansible_distribution == "redhat"
+      when: ansible_distribution == "redhat"  # Executes only if distribution is Red Hat
