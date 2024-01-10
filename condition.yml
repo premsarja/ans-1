@@ -4,12 +4,13 @@
   vars:
     action: true
   tasks:
-    - name: run if flavour is CentOS
-      ansible.builtin.debug:
-        msg: welcome to CentOS
-      when: ansible_distribution == "CentOS"     
 
-    - name: run if flavour is redhat
+    - name: run if flavor is CentOS
       ansible.builtin.debug:
-        msg: welcome to redhat
-      when: ansible_distribution == "redhat"       
+        msg: "Welcome to CentOS {{ ansible_distribution }}"
+      when: ansible_distribution == "CentOS"
+
+    - name: run if flavor is redhat
+      ansible.builtin.debug:
+        msg: "Welcome to CentOS {{ ansible_distribution }}"
+      when: ansible_distribution == "redhat"
