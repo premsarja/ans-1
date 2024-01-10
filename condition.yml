@@ -12,5 +12,5 @@
 
     - name: run if flavor is redhat
       ansible.builtin.debug:
-        msg: "Welcome to CentOS {{ ansible_distribution }}"
+        msg: "Welcome to redhat {{ ansible_distribution }}"
       when: ansible_distribution == "redhat"
