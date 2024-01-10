@@ -4,7 +4,6 @@
   vars:
     action: true
   tasks:
-
     - name: run if flavor is CentOS
       ansible.builtin.debug:
         msg: "Welcome to CentOS {{ ansible_distribution }}"
