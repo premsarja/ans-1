@@ -1,0 +1,11 @@
+---
+
+- name: condition
+  hosts: mongodb-dev.roboshop-internal
+  vars:
+    action: true
+  tasks:
+    - name: run if flavour is centos
+      ansible.buitin.debug:
+        msg: welcome to centos
+      when: ansible_distribution == "centOS"     
